@@ -34,7 +34,6 @@ class HomeController extends Controller
 
      public function creator()
     {
-        dd(test());
         return view('users.index');
     }
 

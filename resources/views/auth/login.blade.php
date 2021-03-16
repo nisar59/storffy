@@ -11,13 +11,7 @@ $route=Route::current()->uri();
   <!-- /.login-logo -->
   <div class="card">
     <div class="card-body login-card-body">
-      @if($route=='creator/login')
-      <h2 class="login-box-msg">Hi Creator!</h2>
-      @elseif($route=='admin/login')
-      <h2 class="login-box-msg">Hi Admin!</h2>
-      @else
-      <h2 class="login-box-msg">Hello viewer!</h2>
-      @endif
+      <h2 class="login-box-msg">Hi Welcome Back!</h2>
       <p class="login-box-msg">Sign in to start your session</p>
       <form action="login" method="post">
         @csrf

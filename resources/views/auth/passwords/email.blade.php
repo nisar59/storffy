@@ -16,13 +16,8 @@ $route=Route::current()->uri();
     {{ session('status') }}
             </div>
         @endif
-      @if($route=='creator/login')
-      <h2 class="login-box-msg">Hi Creator!</h2>
-      @elseif($route=='admin/login')
-      <h2 class="login-box-msg">Hi Admin!</h2>
-      @else
-      <h2 class="login-box-msg">Hello viewer!</h2>
-      @endif
+
+      <h2 class="login-box-msg">Reset Password</h2>
       <form action="{{ route('password.email') }}" method="post">
         @csrf
         <div class="input-group mb-3">

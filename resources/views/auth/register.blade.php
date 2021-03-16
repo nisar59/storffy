@@ -12,12 +12,9 @@ $route=Route::current()->uri();
 
   <div class="card">
     <div class="card-body register-card-body">
-      @if($route=='creator/register')
-      <h2 class="login-box-msg">Hi Creator!</h2>
-      @else
-      <h2 class="login-box-msg">Hello viewer!</h2>
-      @endif
-      <p class="login-box-msg">Register a new membership</p>
+
+      <h2 class="login-box-msg">Hi Welcome!</h2>
+  
       @if($errors->any())
       @foreach($errors->all() as $error)
       <li class="text-danger" style="font-size: 12px;">{{$error}}</li>
