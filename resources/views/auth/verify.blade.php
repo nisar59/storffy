@@ -1,9 +1,12 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
+<div class="login-box">
+  <div class="register-logo">
+    <a href="{{url('/')}}"><img width="20%" src="{{asset('public/img/logo-ima.png')}}" alt=""></a>
+  </div>
     <div class="row justify-content-center">
-        <div class="col-md-8">
+        <div class="col-md-12">
             <div class="card">
                 <div class="card-header">{{ __('Verify Your Email Address') }}</div>
 
@@ -19,6 +22,7 @@
                     <form class="d-inline" method="POST" action="{{ route('verification.resend') }}">
                         @csrf
                         <button type="submit" class="btn btn-link p-0 m-0 align-baseline">{{ __('click here to request another') }}</button>.
+                        <a href="{{url('login')}}">login</a>
                     </form>
                 </div>
             </div>
