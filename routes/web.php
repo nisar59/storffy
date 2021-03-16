@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-//Auth::routes(['verify' => true]);
+Auth::routes(['verify' => true]);
 Auth::routes();
 Route::get('/', 'pathController@index');
 Route::get('home', 'pathController@index');
@@ -48,6 +48,6 @@ Route::group(['prefix' => 'admin', 'as' => 'admin', 'middleware' => 'auth:admin'
 Route::group(['prefix' => 'creator', 'as' => 'user', 'middleware' => 'auth:creator' ], function () {
     Route::get('/', 'HomeController@creator');
 });
-Route::group(['prefix' => 'viewer', 'as' => 'viewer','middleware' => ['verified'],'middleware' => 'auth:user' ], function () {
+Route::group(['prefix' => 'viewer', 'as' => 'viewer','middleware' => ['auth', 'verified'],'middleware' => 'auth:user' ], function () {
     Route::get('/', 'HomeController@index');
 });
