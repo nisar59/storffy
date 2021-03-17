@@ -22,7 +22,7 @@ Route::get('contact-us', 'pathController@contact');
 Route::get('faqs', 'pathController@faqs');
 
 Route::any('logout', ['as' => 'logout', 'uses' => 'Auth\LoginController@logout']);
-Route::get('/login', ['as' => 'login', 'uses' => 'Auth\LoginController@showLoginForm']);
+// Route::get('/login', ['as' => 'login', 'uses' => 'Auth\LoginController@showLoginForm']);
 
 ////////////////////////////////////////////////////////////////
 

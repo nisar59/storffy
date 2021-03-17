@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Modules\Coupons\Entities\Coupon;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Database\Eloquent\Model;
 
 class CouponsController extends Controller
 {
@@ -16,7 +17,7 @@ class CouponsController extends Controller
      */
     public function index()
     {
-        dd(Auth()->admin());
+    
         return view('coupons::index');
     }
 
@@ -36,12 +37,18 @@ class CouponsController extends Controller
      */
     public function store(Request $request)
     {
-
+ 
+ $request->validate([
+    'total_price' => 'min:100',
+    'price_per' => 'min:5',
+]);           
         $coupon=new Coupon;
         $coupon->name=$request->input('name');
-        $coupon->no_of_coupons=$request->input('no');
-        $coupon->code=base64_encode(rand());
-        $coupon->coupon_for=$request->input('for');
+        $coupon->coupon_for=$request->input('social');
+        $coupon->no_of_coupons="storffy".rand(50000 , 99999);
+        $coupon->total_price=$request->input('total_price');
+        $coupon->price_per_coupon=$request->input('price_per');
+        $coupon->created_by=$request->input('created_by');
         $coupon->save();
 
         return redirect('coupons/')->with('success','coupon created');

@@ -1,4 +1,6 @@
+
 <?php
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -11,7 +13,8 @@
 |
 */
 
-Route::prefix('coupons')->group(function() {
+
+Route::group(['prefix' => 'coupons', 'as' => 'coupons','middleware' => ['auth', 'verified'],'middleware' => 'auth:user' ], function () {
     Route::get('/', 'CouponsController@index');
     Route::get('/create', 'CouponsController@create');
     Route::Post('/store', 'CouponsController@store');
