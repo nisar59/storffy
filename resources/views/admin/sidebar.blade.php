@@ -476,6 +476,12 @@
               <p> Coupons</p>
             </a>
           </li>
+            <li class="nav-item">
+            <a href="{{URL::to('users')}}" class="nav-link">
+              <i class="fas fa-circle nav-icon"></i>
+              <p> Users</p>
+            </a>
+          </li>
   <li class="nav-item">
             <a href="{{URL::to('logout')}}" class="nav-link">
               <i class="fas fa-circle nav-icon"></i>

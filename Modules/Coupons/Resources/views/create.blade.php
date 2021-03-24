@@ -41,26 +41,27 @@
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Coupon For</label>
-                    <select class="c-select form-control" name="social">
-                      <option selected>Coupon For</option>
-                      <option value="youtube">Youtube</option>
-                      <option value="instagram">Instagram</option>
-                      <option value="facebook">Facebook</option>
+                    <select class="c-select form-control" name="coupon_for">
+                      @foreach($couponfor as $key)
+                      <option value="{{$key->id}}">{{$key->name}}</option>
+                      @endforeach
                     </select>
+                     <a href="{{url('coupons_for')}}" id="link">create coupon for</a>
                   </div>
-                      
+                     
                        <div class="form-group">
                     <label for="exampleInputPassword1">Total Price</label>
-                    <input type="number" name="total_price" id="ttlprice" min="100" class="form-control" id="exampleInputPassword1" placeholder="No of Coupons" >
+                    <input type="number" name="total_price" id="ttlprice"  class="form-control" id="exampleInputPassword1" placeholder="Total Price" >
                   </div>
                        <div class="form-group">
                     <label for="exampleInputPassword1">Price Per Coupon</label>
-                  <input type="number" name="price_per" min="5" class="form-control"  placeholder="No of Coupons" id="prpercoupon"  onchange="myFunction()" >
+                  <input type="number" name="price_per_coupon" class="form-control"  placeholder="Price Per Coupon" id="prpercoupon"  onchange="myFunction()" >
                   </div>
                   <div class="form-group">
                     <label for="exampleInputPassword1">Total Number Of Coupon</label>
-                    <input type="text" readonly name="" class="form-control"  placeholder="No of Coupons" id="ttlcoupon">
+                    <input type="text" readonly name="total_coupon" class="form-control"  placeholder="Total Number Of Coupon" id="ttlcoupon">
                   </div>
+                
                 </div>
                 <!-- /.card-body -->
 
@@ -70,6 +71,8 @@
               </form>
             </div>
   </div>
+  @endsection
+  @section('js')
   <script>
      function myFunction() {
    var x = document.getElementById("ttlprice").value;
@@ -88,8 +91,8 @@ else{
    
   
 }
-   
-
-
   </script>
+<style>
+
+</style>
 @endsection
