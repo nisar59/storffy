@@ -33,3 +33,7 @@
 <script src="{{asset('public/dist/js/demo.js')}}"></script>
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <script src="{{asset('public/dist/js/pages/dashboard.js')}}"></script>
+<script src="{{asset('public/plugins/datatables/jquery.dataTables.min.js')}}"></script>
+<script src="{{asset('public/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js')}}"></script>
+<script src="{{asset('public/plugins/datatables-responsive/js/dataTables.responsive.min.js')}}"></script>
+

@@ -35,6 +35,9 @@
         }
     },
     "autoload": {
+         "files": [
+        "app/Helper/helper.php"
+    ],
         "psr-4": {
             "App\\": "app/",
             "Modules\\": "Modules/"
@@ -42,10 +45,9 @@
         "classmap": [
             "database/seeds",
             "database/factories"
-        ],
-        "files": [
-            "app/http/Helpers/Helpers.php"
-        ],
+        ]
+
+
     },
     "autoload-dev": {
         "psr-4": {

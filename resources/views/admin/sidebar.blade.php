@@ -38,7 +38,7 @@
                   <p>Dashboard v1</p>
                 </a>
               </li>
-              <li class="nav-item">
+              {{-- <li class="nav-item">
                 <a href="./index2.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
                   <p>Dashboard v2</p>
@@ -49,10 +49,10 @@
                   <i class="far fa-circle nav-icon"></i>
                   <p>Dashboard v3</p>
                 </a>
-              </li>
+              </li> --}}
             </ul>
           </li>
-          <li class="nav-item">
+          {{-- <li class="nav-item">
             <a href="pages/widgets.html" class="nav-link">
               <i class="nav-icon fas fa-th"></i>
               <p>
@@ -468,15 +468,28 @@
               <i class="nav-icon fas fa-file"></i>
               <p>Documentation</p>
             </a>
-          </li>
-          <li class="nav-header">MULTI LEVEL EXAMPLE</li>
+          </li> --}}
+          {{-- <li class="nav-header">MULTI LEVEL EXAMPLE</li> --}}
           <li class="nav-item">
-            <a href="#" class="nav-link">
+            <a href="{{URL::to('coupons')}}" class="nav-link">
               <i class="fas fa-circle nav-icon"></i>
-              <p>Level 1</p>
+              <p> Coupons</p>
             </a>
           </li>
-          <li class="nav-item">
+            <li class="nav-item">
+            <a href="{{URL::to('users')}}" class="nav-link">
+              <i class="fas fa-circle nav-icon"></i>
+              <p> Users</p>
+            </a>
+          </li>
+  <li class="nav-item">
+            <a href="{{URL::to('logout')}}" class="nav-link">
+              <i class="fas fa-circle nav-icon"></i>
+              <p> Logout</p>
+            </a>
+          </li>
+             
+          {{-- <li class="nav-item">
             <a href="#" class="nav-link">
               <i class="nav-icon fas fa-circle"></i>
               <p>
@@ -547,12 +560,12 @@
               <p>Warning</p>
             </a>
           </li>
-          <li class="nav-item">
-            <a href="#" class="nav-link">
+          <li class="nav-item"> --}}
+            {{-- <a href="#" class="nav-link">
               <i class="nav-icon far fa-circle text-info"></i>
               <p>Informational</p>
             </a>
-          </li>
+          </li> --}}
         </ul>
       </nav>
       <!-- /.sidebar-menu -->

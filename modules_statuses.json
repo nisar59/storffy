@@ -1,4 +1,7 @@
 {
     "Coupon": true,
-    "Coupons": true
+    "Coupons": true,
+    "User": true,
+    "Users": true,
+    "CouponFor": true
 }
