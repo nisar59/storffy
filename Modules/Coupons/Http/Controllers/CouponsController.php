@@ -16,7 +16,7 @@ class CouponsController extends Controller
      */
     public function index()
     {
-        dd(Auth()->admin());
+        
         return view('coupons::index');
     }
 
